@@ -1,9 +1,236 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Joseph Thomas | Computer Science Student</title>
+<meta name="description" content="Portfolio of Joseph Thomas, Computer Science student at Sheridan College.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=IBM+Plex+Sans:wght@400;500&family=IBM+Plex+Mono:wght@400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#eef2f7; --surface:#ffffff; --ink:#14213d; --muted:#51607a;
+  --line:#cfd8e6; --accent:#2446d6; --accent-ink:#ffffff;
+  --code-bg:#14213d; --code-ink:#dfe7f5; --code-key:#8fb0ff; --code-str:#9be3b0;
+}
+@media (prefers-color-scheme:dark){
+  :root{--bg:#0d1424; --surface:#151e33; --ink:#e8eefb; --muted:#9aa8c4;
+  --line:#26324d; --accent:#7f9dff; --accent-ink:#0d1424; --code-bg:#0a101d;}
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.0625rem/1.65 "IBM Plex Sans",system-ui,sans-serif}
+a{color:var(--accent)}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:4px}
+.wrap{max-width:62rem;margin:0 auto;padding:0 1.5rem}
+h1,h2,h3{font-family:"Bricolage Grotesque",system-ui,sans-serif;line-height:1.1;margin:0}
+h2{font-size:1.9rem;font-weight:700;margin-bottom:1.5rem}
+h3{font-size:1.2rem;font-weight:700}
+section{padding:3.5rem 0;border-top:1px solid var(--line)}
+p{margin:0 0 1rem;max-width:42rem}
+
+header.top{padding:1.25rem 0}
+header.top .wrap{display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap}
+.brand{font:700 1.1rem "Bricolage Grotesque",sans-serif;text-decoration:none;color:var(--ink)}
+nav a{color:var(--muted);text-decoration:none;margin-left:1.25rem;font-size:.98rem}
+nav a:hover{color:var(--accent)}
+
+.hero{display:grid;grid-template-columns:1.1fr 1fr;gap:3rem;align-items:center;padding:3rem 0 4rem}
+.hero h1{font-size:clamp(2.8rem,7vw,5rem);font-weight:800;letter-spacing:-.03em}
+.hero .lede{font-size:1.2rem;color:var(--muted);margin:1.25rem 0 1.75rem}
+.btns{display:flex;gap:.75rem;flex-wrap:wrap}
+.btn{display:inline-block;padding:.7rem 1.2rem;border-radius:.5rem;font-weight:500;text-decoration:none;border:2px solid var(--accent)}
+.btn.primary{background:var(--accent);color:var(--accent-ink)}
+.btn.ghost{color:var(--accent)}
+.btn:hover{filter:brightness(1.08)}
+
+pre.code{margin:0;background:var(--code-bg);color:var(--code-ink);padding:1.5rem;border-radius:.75rem;
+  font:400 .92rem/1.7 "IBM Plex Mono",monospace;overflow-x:auto}
+.k{color:var(--code-key)} .s{color:var(--code-str)}
+
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(14rem,1fr));gap:1.5rem}
+.skills h3{margin-bottom:.5rem}
+.skills ul,.job ul{margin:0;padding-left:1.1rem;color:var(--muted)}
+.skills li,.job li{margin-bottom:.25rem}
+
+.projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(16rem,1fr));gap:1.25rem}
+.project{background:var(--surface);border:1px solid var(--line);border-radius:.75rem;padding:1.4rem;display:flex;flex-direction:column;gap:.6rem}
+.project p{margin:0;color:var(--muted);font-size:.98rem}
+.tags{font:400 .85rem "IBM Plex Mono",monospace;color:var(--muted);margin-top:auto}
+.project a{font-weight:500}
+
+.job{display:grid;grid-template-columns:11rem 1fr;gap:1.5rem;padding:1.4rem 0;border-bottom:1px solid var(--line)}
+.job:last-child{border-bottom:0}
+.job .when{color:var(--muted);font-size:.95rem}
+.job .where{color:var(--muted);margin:.15rem 0 .6rem}
+
+footer{padding:2.5rem 0 3rem;border-top:1px solid var(--line);color:var(--muted);font-size:.95rem}
+
+@media (max-width:760px){
+  .hero{grid-template-columns:1fr;gap:2rem}
+  .job{grid-template-columns:1fr;gap:.25rem}
+  nav a{margin:0 1rem 0 0}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
 <body>
 
-<h1>Changed From VS Code</h1>
-<p>Hi There - VS Code.</p>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top">Joseph Thomas</a>
+    <nav aria-label="Main">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <div class="wrap">
+    <div class="hero">
+      <div>
+        <h1>Joseph Thomas</h1>
+        <p class="lede">Computer Science student at Sheridan College who writes Python, Java and C#, and has supported real users with real technical problems.</p>
+        <div class="btns">
+          <a class="btn primary" href="#projects">See my projects</a>
+          <a class="btn ghost" href="mailto:Josephsolomonthomas77@gmail.com">Email me</a>
+        </div>
+      </div>
+<pre class="code" aria-label="Summary of Joseph as a code object"><span class="k">joseph</span> = {
+  <span class="k">"studying"</span>: <span class="s">"BSc Computer Science"</span>,
+  <span class="k">"school"</span>:   <span class="s">"Sheridan College"</span>,
+  <span class="k">"graduates"</span>: <span class="s">2028</span>,
+  <span class="k">"languages"</span>: [<span class="s">"Python"</span>, <span class="s">"Java"</span>, <span class="s">"C#"</span>],
+  <span class="k">"spoken"</span>:   [<span class="s">"English"</span>, <span class="s">"French (B2)"</span>],
+  <span class="k">"gpa"</span>:      <span class="s">3.6</span>,
+}</pre>
+    </div>
+  </div>
+
+  <section id="about">
+    <div class="wrap">
+      <h2>About</h2>
+      <p>I'm a Computer Science student at Sheridan College in Oakville, expecting to graduate in 2028. I graduated as an Ontario Scholar with a 3.6 GPA.</p>
+      <p>Before college I worked in technical support at St. Aloysius Gonzaga, where I helped staff with application and hardware problems. I like explaining things clearly and keeping people calm when something breaks.</p>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="wrap">
+      <h2>Skills</h2>
+      <div class="skills">
+        <div>
+          <h3>Programming</h3>
+          <ul><li>Python</li><li>Java</li><li>C#</li></ul>
+        </div>
+        <div>
+          <h3>Technical support</h3>
+          <ul><li>Application support</li><li>Helping staff with technical issues</li><li>Hardware implementation</li></ul>
+        </div>
+        <div>
+          <h3>Working with people</h3>
+          <ul><li>Customer service</li><li>Adaptability and flexibility</li><li>Intermediate French (B2)</li></ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="wrap">
+      <h2>Projects</h2>
+      <div class="projects">
+        <!-- Replace each card with a real project. Delete the ones you don't need. -->
+        <article class="project">
+          <h3>Project name</h3>
+          <p>One or two sentences on what it does and the problem it solves.</p>
+          <div class="tags">Python</div>
+          <a href="https://github.com/YOUR-USERNAME/PROJECT-REPO">View on GitHub</a>
+        </article>
+        <article class="project">
+          <h3>Project name</h3>
+          <p>Say what you built, what you used, and what you learned.</p>
+          <div class="tags">Java</div>
+          <a href="https://github.com/YOUR-USERNAME/PROJECT-REPO">View on GitHub</a>
+        </article>
+        <article class="project">
+          <h3>Project name</h3>
+          <p>A coursework or personal project you're proud of.</p>
+          <div class="tags">C#</div>
+          <a href="https://github.com/YOUR-USERNAME/PROJECT-REPO">View on GitHub</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <div class="wrap">
+      <h2>Experience and education</h2>
+
+      <div class="job">
+        <div class="when">Nov 2022 to Feb 2023</div>
+        <div>
+          <h3>Technical Support</h3>
+          <div class="where">St. Aloysius Gonzaga, Mississauga, ON</div>
+          <ul>
+            <li>Provided technical support for applications and users.</li>
+            <li>Assisted staff with technical issues.</li>
+            <li>Supported hardware implementation projects.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="job">
+        <div class="when">Dec 2022 to Jan 2023</div>
+        <div>
+          <h3>Kitchen Aide</h3>
+          <div class="where">Regeneration Brampton, Brampton, ON</div>
+          <ul>
+            <li>Kept kitchen stations clean and organised.</li>
+            <li>Restocked cupboards, refrigerators and service stations.</li>
+            <li>Operated industrial mixers and food processing machinery.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="job">
+        <div class="when">Expected June 2028</div>
+        <div>
+          <h3>Bachelor of Science in Computer Science</h3>
+          <div class="where">Sheridan College, Oakville, ON</div>
+        </div>
+      </div>
+
+      <div class="job">
+        <div class="when">2020 to 2024</div>
+        <div>
+          <h3>High School Diploma</h3>
+          <div class="where">St. Aloysius Gonzaga Secondary School, Mississauga, ON</div>
+          <ul><li>Ontario Scholar, 3.6 GPA</li></ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap">
+      <h2>Contact</h2>
+      <p>I'm open to internships, co-op placements and part-time tech roles. The quickest way to reach me is email.</p>
+      <div class="btns">
+        <a class="btn primary" href="mailto:Josephsolomonthomas77@gmail.com">Josephsolomonthomas77@gmail.com</a>
+        <a class="btn ghost" href="https://github.com/YOUR-USERNAME">GitHub profile</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">&copy; 2026 Joseph Thomas</div>
+</footer>
 
 </body>
 </html>
